@@ -1,0 +1,40 @@
+Script started on Fri 02 Feb 2018 12:19:12 PM PST
+[leesam@athena:21]> cat lab1.c
+/*-----------------*/
+/*Sam Lee*/
+/*Section 2*/
+/*Lab 1*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) 
+{
+	printf("\nLab 1 \n\n");
+	printf("Hello World\n");
+	printf("Hi, Sam Lee \n\n");
+	printf("\"The flower that blooms in");
+	printf("\nadversity is the most rare and");
+	printf("\nbeautiful of all.\"");
+	printf("\n-The Emperor of China\n");
+	printf("\n");
+	return EXIT_SUCCESS;
+}
+/*-----------------*/
+[leesam@athena:22]> gcc lab1.c
+[leesam@athena:23]> a.out
+
+Lab 1 
+
+Hello World
+Hi, Sam Lee 
+
+"The flower that blooms in
+adversity is the most rare and
+beautiful of all."
+-The Emeperor of China
+
+[leesam@athena:24]> exit
+exit
+
+Script done on Fri 02 Feb 2018 12:19:28 PM PST

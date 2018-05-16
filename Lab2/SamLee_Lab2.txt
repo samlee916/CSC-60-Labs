@@ -1,0 +1,269 @@
+Script started on Thu 15 Feb 2018 12:46:28 PM PST
+[leesam@sp1:8]> history -c
+[leesam@sp1:9]> cd "CSC 60"
+[leesam@sp1:10]> mkdir Lab2
+[leesam@sp1:11]> pwd
+/gaia/class/student/leesam/CSC 60
+[leesam@sp1:12]> mkdir xyz
+[leesam@sp1:13]> cd xyz
+[leesam@sp1:14]> pwd
+/gaia/class/student/leesam/CSC 60/xyz
+[leesam@sp1:15]> cd..
+cd..: Command not found.
+[leesam@sp1:16]> cd ..
+[leesam@sp1:17]> pwd
+/gaia/class/student/leesam/CSC 60
+[leesam@sp1:18]> ls> >> file1
+[leesam@sp1:19]> cat file1
+1- Unix Start.pptx
+2- VIM Start-3.pptx
+3-Unix History Files Paths.pptx
+C-1 Start.pptx
+C-2 Characters ControlStructures.pptx
+C-3 Loops.pptx
+CodeSystemLimits.c
+file1
+Lab1/
+Lab2/
+OS_Shell _vim Information.docx
+The C Programming Language.pdf
+The Linux Programming Interface.pdf
+VIM Quick Reference Card.pdf
+xyz/
+[leesam@sp1:20]> less file1
+[?1049h[?1h=1- Unix Start.pptx
+2- VIM Start-3.pptx
+3-Unix History Files Paths.pptx
+C-1 Start.pptx
+C-2 Characters ControlStructures.pptx
+C-3 Loops.pptx
+CodeSystemLimits.c
+file1
+Lab1/
+Lab2/
+OS_Shell _vim Information.docx
+The C Programming Language.pdf
+The Linux Programming Interface.pdf
+VIM Quick Reference Card.pdf
+xyz/
+[7mfile1 (END) [27m[K[K[?1l>[?1049l[leesam@sp1:21]> file *
+1- Unix Start.pptx:                    Microsoft PowerPoint 2007+
+2- VIM Start-3.pptx:                   Microsoft PowerPoint 2007+
+3-Unix History Files Paths.pptx:       Microsoft PowerPoint 2007+
+C-1 Start.pptx:                        Microsoft PowerPoint 2007+
+C-2 Characters ControlStructures.pptx: Microsoft PowerPoint 2007+
+C-3 Loops.pptx:                        Microsoft PowerPoint 2007+
+CodeSystemLimits.c:                    ASCII C program text, with CRLF line terminators
+file1:                                 ASCII English text
+Lab1:                                  setgid directory
+Lab2:                                  setgid directory
+OS_Shell _vim Information.docx:        Microsoft Word 2007+
+The C Programming Language.pdf:        PDF document, version 1.3
+The Linux Programming Interface.pdf:   PDF document, version 1.7
+VIM Quick Reference Card.pdf:          PDF document, version 1.4
+xyz:                                   setgid directory
+[leesam@sp1:22]> wc file1
+ 15  37 308 file1
+[leesam@sp1:23]> wc *
+     975     6020   349611 1- Unix Start.pptx
+     292     1554    84314 2- VIM Start-3.pptx
+    2414    13200   655189 3-Unix History Files Paths.pptx
+    2383    13914   681206 C-1 Start.pptx
+     404     2494   132953 C-2 Characters ControlStructures.pptx
+     313     1659    91185 C-3 Loops.pptx
+      54      194     1913 CodeSystemLimits.c
+      15       37      308 file1
+wc: Lab1: Is a directory
+       0        0        0 Lab1
+wc: Lab2: Is a directory
+       0        0        0 Lab2
+      79      430    20994 OS_Shell _vim Information.docx
+   18348   395743  2900111 The C Programming Language.pdf
+   33588   167919  7265113 The Linux Programming Interface.pdf
+     718     4716   155928 VIM Quick Reference Card.pdf
+wc: xyz: Is a directory
+       0        0        0 xyz
+   59583   607880 12338825 total
+[leesam@sp1:24]> grep lab file1
+[leesam@sp1:25]> cp file 1[K1 file2
+[leesam@sp1:26]> ls
+1- Unix Start.pptx		       file2
+2- VIM Start-3.pptx		       Lab1/
+3-Unix History Files Paths.pptx        Lab2/
+C-1 Start.pptx			       OS_Shell _vim Information.docx
+C-2 Characters ControlStructures.pptx  The C Programming Language.pdf
+C-3 Loops.pptx			       The Linux Programming Interface.pdf
+CodeSystemLimits.c		       VIM Quick Reference Card.pdf
+file1				       xyz/
+[leesam@sp1:27]> cd xyz
+[leesam@sp1:28]> cp ../file1
+cp: missing destination file operand after `../file1'
+Try `cp --help' for more information.
+[leesam@sp1:29]> cp ../file1 .
+[leesam@sp1:30]> ls
+file1
+[leesam@sp1:31]> mv file1 file2
+[leesam@sp1:32]> ls
+file2
+[leesam@sp1:33]> mv ../file1 .
+[leesam@sp1:34]> cd ..
+[leesam@sp1:35]> ls
+1- Unix Start.pptx		       Lab1/
+2- VIM Start-3.pptx		       Lab2/
+3-Unix History Files Paths.pptx        OS_Shell _vim Information.docx
+C-1 Start.pptx			       The C Programming Language.pdf
+C-2 Characters ControlStructures.pptx  The Linux Programming Interface.pdf
+C-3 Loops.pptx			       VIM Quick Reference Card.pdf
+CodeSystemLimits.c		       xyz/
+file2
+[leesam@sp1:36]> cd xyz
+[leesam@sp1:37]> ls
+file1  file2
+[leesam@sp1:38]> cmp file1 file2
+[leesam@sp1:39]> ls > xyzlist
+[leesam@sp1:40]> cmp file1 xyzlist
+file1 xyzlist differ: byte 1, line 1
+[leesam@sp1:41]> diff file1 xyzlist
+1,7d0
+< 1- Unix Start.pptx
+< 2- VIM Start-3.pptx
+< 3-Unix History Files Paths.pptx
+< C-1 Start.pptx
+< C-2 Characters ControlStructures.pptx
+< C-3 Loops.pptx
+< CodeSystemLimits.c
+9,15c2,3
+< Lab1/
+< Lab2/
+< OS_Shell _vim Information.docx
+< The C Programming Language.pdf
+< The Linux Programming Interface.pdf
+< VIM Quick Reference Card.pdf
+< xyz/
+---
+> file2
+> xyzlist
+[leesam@sp1:42]> rm file1
+[leesam@sp1:43]> ls
+file2  xyzlist
+[leesam@sp1:44]> ps -u
+Warning: bad syntax, perhaps a bogus '-'? See /usr/share/doc/procps-3.2.8/FAQ
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+leesam   24770  0.0  0.0 116752  2032 pts/2    Ss   12:46   0:00 -csh
+leesam   24818  0.0  0.0 107132   832 pts/2    S+   12:46   0:00 script SamLee_L
+leesam   24820  0.0  0.0 107644   404 pts/2    S+   12:46   0:00 script SamLee_L
+leesam   24821  0.0  0.0 110380  1808 pts/3    Ss   12:46   0:00 -sh -i
+leesam   25045  1.0  0.0 114488  1296 pts/3    R+   12:52   0:00 ps -u
+[leesam@sp1:45]> ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  2584 24821 24820  0  80   0 - 27595 sys_rt pts/3    00:00:00 csh
+0 R  2584 25049 24821  0  80   0 - 27036 -      pts/3    00:00:00 ps
+[leesam@sp1:46]> !!
+ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  2584 24821 24820  0  80   0 - 27595 sys_rt pts/3    00:00:00 csh
+0 R  2584 25050 24821  0  80   0 - 27037 -      pts/3    00:00:00 ps
+[leesam@sp1:47]> history
+     9	12:47	cd "CSC 60"
+    10	12:47	mkdir Lab2
+    12	12:47	mkdir xyz
+    15	12:47	cd..
+    17	12:48	pwd
+    18	12:48	ls > file1
+    19	12:48	cat file1
+    20	12:49	less file1
+    21	12:49	file *
+    22	12:49	wc file1
+    23	12:49	wc *
+    24	12:49	grep lab file1
+    25	12:50	cp file1 file2
+    28	12:50	cp ../file1
+    29	12:50	cp ../file1 .
+    31	12:51	mv file1 file2
+    33	12:51	mv ../file1 .
+    34	12:51	cd ..
+    36	12:51	cd xyz
+    38	12:51	cmp file1 file2
+    39	12:51	ls > xyzlist
+    40	12:52	cmp file1 xyzlist
+    41	12:52	diff file1 xyzlist
+    42	12:52	rm file1
+    43	12:52	ls
+    44	12:52	ps -u
+    46	12:52	ps -l
+    47	12:52	history
+[leesam@sp1:48]> history[18Gps -l[K[18Ghistory[18G[K![K[leesam@sp1:48]> !12 
+mkdir xyz
+[leesam@sp1:49]> cd ..
+[leesam@sp1:50]> head lab1.c
+head: cannot open `lab1.c' for reading: No such file or directory
+[leesam@sp1:51]> cd Lab1
+[leesam@sp1:52]> head lab1.c
+/*-----------------*/
+/*Sam Lee*/
+/*Section 2*/
+/*Lab 1*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) 
+{
+[leesam@sp1:53]> tail lab1.c
+	printf("Hello World\n");
+	printf("Hi, Sam Lee \n\n");
+	printf("\"The flower that blooms in");
+	printf("\nadversity is the most rare and");
+	printf("\nbeautiful of all.\"");
+	printf("\n-The Emperor of China\n");
+	printf("\n");
+	return EXIT_SUCCESS;
+}
+/*-----------------*/
+[leesam@sp1:54]> ls -al | less
+[?1049h[?1h=total 120
+drwx--S--- 2 leesam stdce  4096 Feb 11 21:02 ./
+drwx--S--- 5 leesam stdce  4096 Feb 15 12:51 ../
+-rwx------ 1 leesam stdce  5055 Feb 11 21:02 a.out*
+-rw------- 1 leesam stdce   415 Feb  7 16:32 lab1.c
+-rw------- 1 leesam stdce 12288 Feb 11 21:03 .lab1.c.swp
+-rw------- 1 leesam stdce 83968 Feb 11 20:58 Lab 1.doc
+-rw------- 1 leesam stdce   808 Feb  7 17:47 SamLee_Lab1.txt
+[7m(END) [27m[K[K[?1l>[?1049l[leesam@sp1:55]> history
+     9	12:47	cd "CSC 60"
+    10	12:47	mkdir Lab2
+    15	12:47	cd..
+    17	12:48	pwd
+    18	12:48	ls > file1
+    19	12:48	cat file1
+    20	12:49	less file1
+    21	12:49	file *
+    22	12:49	wc file1
+    23	12:49	wc *
+    24	12:49	grep lab file1
+    25	12:50	cp file1 file2
+    28	12:50	cp ../file1
+    29	12:50	cp ../file1 .
+    31	12:51	mv file1 file2
+    33	12:51	mv ../file1 .
+    36	12:51	cd xyz
+    38	12:51	cmp file1 file2
+    39	12:51	ls > xyzlist
+    40	12:52	cmp file1 xyzlist
+    41	12:52	diff file1 xyzlist
+    42	12:52	rm file1
+    43	12:52	ls
+    44	12:52	ps -u
+    46	12:52	ps -l
+    48	12:53	mkdir xyz
+    49	12:54	cd ..
+    51	12:55	cd Lab1
+    52	12:55	head lab1.c
+    53	12:55	tail lab1.c
+    54	12:56	ls -al | less
+    55	12:56	history
+[leesam@sp1:56]> echo $Shell[K[K[K[KHELL
+/bin/csh
+[leesam@sp1:57]> ^Dexit
+
+Script done on Thu 15 Feb 2018 12:57:54 PM PST

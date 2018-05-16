@@ -1,0 +1,41 @@
+Script started on Tue 24 Apr 2018 10:23:50 PM PDT
+[leesam@sp1:21]> gcc lab9.c
+[leesam@sp1:22]> a.out
+csc60mshell> 
+Argc=0 
+csc60mshell>  
+Argc=0 
+csc60mshell> pwd
+Argc=1 
+Argv 0 = pwd 
+/gaia/class/student/leesam/CSC 60/lab9
+csc60mshell> cd ..
+Argc=2 
+Argv 0 = cd 
+Argv 1 = .. 
+csc60mshell> pwd
+Argc=1 
+Argv 0 = pwd 
+/gaia/class/student/leesam/CSC 60
+csc60mshell> cd lab9
+Argc=2 
+Argv 0 = cd 
+Argv 1 = lab9 
+csc60mshell> pwd
+Argc=1 
+Argv 0 = pwd 
+/gaia/class/student/leesam/CSC 60/lab9
+csc60mshell> cd
+Argc=1 
+Argv 0 = cd 
+csc60mshell> pwd
+Argc=1 
+Argv 0 = pwd 
+/gaia/class/student/leesam
+csc60mshell> exit
+Argc=1 
+Argv 0 = exit 
+[leesam@sp1:23]> exit
+exit
+
+Script done on Tue 24 Apr 2018 10:25:30 PM PDT

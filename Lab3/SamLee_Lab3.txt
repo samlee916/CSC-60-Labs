@@ -1,0 +1,49 @@
+Script started on Mon 19 Feb 2018 10:00:06 AM PST
+[leesam@sp1:19]> cat lab3.c
+/*-------*/
+/*Sam Lee*/
+/*Lab 3  */
+/*Section 2*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int age = 25;
+	double average = 246.7531986;
+
+	printf("\nSam Lee. Lab 3.\n");
+	printf("\nThe dog ran quickly.\n");
+	printf("\nJoe is %d years old.\n", age);
+	printf("\n\"So many books, so little time.\"");
+	printf("\n- Frank Zappa\n");
+	printf("\nThe average = %.1f\n", average);
+	printf("\nThe average = %.3f\n", average);
+	printf("\nThe average = %-.2e\n", average);
+	printf("\n");
+
+	return EXIT_SUCCESS;
+
+}[leesam@sp1:20]> gcc lab3.c
+[leesam@sp1:21]> a,[K.out
+
+Sam Lee. Lab 3.
+
+The dog ran quickly.
+
+Joe is 25 years old.
+
+"So many books, so little time."
+- Frank Zappa
+
+The average = 246.8
+
+The average = 246.753
+
+The average = 2.47e+02
+
+[leesam@sp1:22]> exit
+exit
+
+Script done on Mon 19 Feb 2018 10:00:42 AM PST
